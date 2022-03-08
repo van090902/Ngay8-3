@@ -1,0 +1,220 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #042104;
+}
+.loader
+{
+    position: relative;
+}
+.loader span
+{
+    position: absolute;
+    top: 0;
+    left: -200px;
+    width: 200px;
+    transform-origin: right;
+    transform: rotate(calc(18deg * var(--i)));
+    animation: animateBgColor 10s linear infinite;
+}
+@keyframes animateBgColor 
+{
+    0%
+    {
+        filter: hue-rotate(0deg);
+    }
+    100%
+    {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.loader span::before
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background: #00ff0a;
+    border-radius: 50%;
+    animation: animate 2s linear infinite;
+    animation-delay: calc(-0.1s * var(--i));
+    box-shadow: 0 0 10px #00ff0a,
+    0 0 20px #00ff0a,
+    0 0 40px #00ff0a,
+    0 0 60px #00ff0a,
+    0 0 80px #00ff0a,
+    0 0 100px #00ff0a;
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: translateX(0) scale(0.5);
+    }
+    50%
+    {
+        transform: translateX(200px) scale(1);
+    }
+    100%
+    {
+        transform: translateX(0) scale(0.5);
+    }
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Bad+Script');
+body
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center ;
+    align-items: top center;
+    height: 100vh;
+    background: #042104;
+    font-family: 'Bad Script', cursive;
+}
+h1
+{
+    margin: 0;
+    padding: 0;
+    color: #111;
+    font-size: 4em;
+}
+h1 span
+{
+    display: table-cell;
+    margin: 0;
+    padding: 0;
+    animation: letter 2s linear infinite;
+}
+h1 span:nth-child(1)
+{
+    animation-delay: 0s;
+}
+h1 span:nth-child(2)
+{
+    animation-delay: 0.25s;
+}
+h1 span:nth-child(3)
+{
+    animation-delay: 0.5s;
+}
+h1 span:nth-child(4)
+{
+    animation-delay: 0.75s;
+}
+h1 span:nth-child(5)
+{
+    animation-delay: 1s;
+}
+h1 span:nth-child(6)
+{
+    animation-delay: 1.25s;
+}
+h1 span:nth-child(7)
+{
+    animation-delay: 1.5s;
+}
+h1 span:nth-child(8)
+{
+    animation-delay: 1.75s;
+}
+@keyframes letter
+{
+    0%,100%
+    {
+        color: #fff;
+        filter: blur(2px);
+        text-shadow: 0 0 10px #00b3ff,
+                    0 0 20px #00b3ff,
+                    0 0 40px #00b3ff,
+                    0 0 80px #00b3ff,
+                    0 0 120px #00b3ff,
+                    0 0 200px #00b3ff,
+                    0 0 300px #00b3ff,
+                    0 0 400px #00b3ff;
+    }
+    5%,95%
+    {
+        color: #111;
+        filter: blur(0px);
+        text-shadow: 0 0 10px none;
+    }
+}
+
+.material-icons
+{
+    font-size: 28px;
+    position: absolute;
+    bottom: -100px;
+    color: #111;
+    text-shadow: 0 0 10px #c8ff00,
+                    0 0 20px #c8ff00,
+                    0 0 40px #c8ff00,
+                    0 0 80px #c8ff00,
+                    0 0 120px #c8ff00,
+                    0 0 200px #c8ff00,
+                    0 0 300px #c8ff00,
+                    0 0 400px #c8ff00;
+    animation: icons 5s linear infinite;
+}
+@keyframes icons 
+{
+    0%
+    {
+        opacity: 0;
+    }
+    50%
+    {
+        opacity: 1;
+        
+    }
+    100%
+    {
+        bottom: 100%;
+        opacity: 0;
+    }
+}
+.material-icons:nth-child(2n)
+{
+    left: 10%;
+    animation-delay: 1s;
+}
+.material-icons:nth-child(3n)
+{
+    left: 20%;
+    animation-delay: 3.2s;
+}
+.material-icons:nth-child(4n)
+{
+    left: 30%;
+    animation-delay: 2s;
+}
+.material-icons:nth-child(5n)
+{
+    left: 40%;
+    animation-delay: 4s;
+}
+.material-icons:nth-child(6n)
+{
+    left: 50%;
+    animation-delay: 3s;
+}
+.material-icons:nth-child(7n)
+{
+    left: 60%;
+    animation-delay: 1.7s;
+}
