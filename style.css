@@ -1,4 +1,4 @@
-*
+/**
 {
     margin: 0;
     padding: 0;
@@ -71,7 +71,7 @@ section
     {
         transform: translateX(0) scale(0.5);
     }
-}
+}*/
 
 
 @import url('https://fonts.googleapis.com/css?family=Bad+Script');
@@ -154,7 +154,30 @@ h1 span:nth-child(8)
         text-shadow: 0 0 10px none;
     }
 }
-
+h1 light 
+{
+    display: table-cell;
+    margin: 0;
+    padding: 0;
+    animation: wishes 2s linear infinite;
+}
+@keyframes wishes 
+{
+    0%,100%
+    {
+        color: #111;
+        filter: blur(0px);
+        text-shadow: 0 0 10px #00b3ff,
+                    0 0 20px #00b3ff,
+                    0 0 40px #00b3ff,
+                    0 0 80px #00b3ff,
+                    0 0 120px #00b3ff,
+                    0 0 200px #00b3ff,
+                    0 0 300px #00b3ff,
+                    0 0 400px #00b3ff;
+    }
+    
+}
 .material-icons
 {
     font-size: 28px;
@@ -217,4 +240,19 @@ h1 span:nth-child(8)
 {
     left: 60%;
     animation-delay: 1.7s;
+}
+.material-icons:nth-child(8n)
+{
+    left: 70%;
+    animation-delay: 2s;
+}
+.material-icons:nth-child(9n)
+{
+    left: 80%;
+    animation-delay: 0.5s;
+}
+.material-icons:nth-child(10n)
+{
+    left: 90%;
+    animation-delay: 1.9s;
 }
